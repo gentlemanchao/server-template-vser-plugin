@@ -1,0 +1,25 @@
+{
+  "name": "server-template-vser-plugin",
+  "version": "1.0.0",
+  "description": "serverside template parse plugin for vser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gentlemanchao/server-template-vser-plugin.git"
+  },
+  "keywords": [
+    "vser",
+    "html",
+    "template",
+    "plugin"
+  ],
+  "author": "gentlemanchao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gentlemanchao/server-template-vser-plugin/issues"
+  },
+  "homepage": "https://github.com/gentlemanchao/server-template-vser-plugin#readme"
+}

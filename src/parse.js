@@ -121,10 +121,12 @@ var replaceSlot = function (parentNode, node, slotName) {
 var replaceDefaultSlot = function (parentNode, nodes) {
     const slot = getSlot(parentNode);
     const slotParent = slot && slot.parentNode || null;
-    slotParent && nodes.forEach(function (node) {
-        slotParent.insertBefore(node, slot);
-    });
-    removeNode(slotParent, slot); //移除默认插槽
+    if (slot && slotParent) {
+        while (nodes.length) {
+            slotParent.insertBefore(nodes[0], slot);
+        }
+        removeNode(slotParent, slot); //移除默认插槽
+    }
 }
 
 /**
@@ -154,7 +156,6 @@ var compileChildren = function (dom) {
                 removeNode(itemComp.parentNode, itemComp); //当前节点先移除
                 replaceSlot(content, itemComp, slotName); //再添加到目标位置
             });
-
             //剩下的都是默认组件，放入默认插槽内
             replaceDefaultSlot(content, root.childNodes);
             // content挪到外层
