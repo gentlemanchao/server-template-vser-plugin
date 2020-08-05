@@ -1,28 +1,56 @@
 {
-  "name": "server-template-vser-plugin",
-  "version": "1.0.3",
+  "_from": "server-template-vser-plugin@^1.0.2",
+  "_id": "server-template-vser-plugin@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-1lC5cq7SK4odQvMf7KJPEt5ZIsw8owurBqq8WnSvPnYf8zpRBKIQzDYxcCGh79zwEWvUUpOdb2XaxiSseC2jvQ==",
+  "_location": "/server-template-vser-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "server-template-vser-plugin@^1.0.2",
+    "name": "server-template-vser-plugin",
+    "escapedName": "server-template-vser-plugin",
+    "rawSpec": "^1.0.2",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.2"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/server-template-vser-plugin/-/server-template-vser-plugin-1.0.3.tgz",
+  "_shasum": "fd3bf847e4af8ef3fa983bc9bc58f02f4ac2ba87",
+  "_spec": "server-template-vser-plugin@^1.0.2",
+  "_where": "D:\\test\\vser",
+  "author": {
+    "name": "gentlemanchao"
+  },
+  "bugs": {
+    "url": "https://github.com/gentlemanchao/server-template-vser-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "jsdom": "^16.3.0"
+  },
+  "deprecated": false,
   "description": "serverside template parse plugin for vser",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gentlemanchao/server-template-vser-plugin.git"
-  },
+  "homepage": "https://github.com/gentlemanchao/server-template-vser-plugin#readme",
   "keywords": [
     "vser",
     "html",
     "template",
     "plugin"
   ],
-  "author": "gentlemanchao",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gentlemanchao/server-template-vser-plugin/issues"
+  "main": "index.js",
+  "name": "server-template-vser-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gentlemanchao/server-template-vser-plugin.git"
   },
-  "homepage": "https://github.com/gentlemanchao/server-template-vser-plugin#readme",
-  "dependencies": {
-    "jsdom": "^16.3.0"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.3"
 }
