@@ -1,5 +1,3 @@
-var fs = require("fs");
-var Path = require('path');
 var jsdom = require("jsdom");
 var {
     JSDOM

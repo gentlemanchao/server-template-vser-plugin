@@ -1,6 +1,6 @@
 {
   "name": "server-template-vser-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "serverside template parse plugin for vser",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/gentlemanchao/server-template-vser-plugin/issues"
   },
-  "homepage": "https://github.com/gentlemanchao/server-template-vser-plugin#readme"
+  "homepage": "https://github.com/gentlemanchao/server-template-vser-plugin#readme",
+  "devDependencies": {
+    "jsdom": "^16.3.0"
+  }
 }
