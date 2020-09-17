@@ -8,7 +8,7 @@ var {
  * @param {*} node 
  * @param {*} styleString 
  */
-var setStyle = function (node, styleString) {
+function setStyle(node, styleString) {
     const sList = styleString.split(';');
     sList.forEach((sty) => {
         if (sty.trim() === '') return;
@@ -24,7 +24,7 @@ var setStyle = function (node, styleString) {
  * @param {*} node 
  * @param {*} classNames 
  */
-var setClass = function (node, classNames) {
+function setClass(node, classNames) {
     const clsList = classNames.split(' ');
     clsList.forEach((cls) => {
         let _cls = cls.trim();
@@ -38,14 +38,14 @@ var setClass = function (node, classNames) {
  * @param {*} name 
  * @param {*} value 
  */
-var setAttribute = function (node, name, value) {
+function setAttribute(node, name, value) {
     node && node.setAttribute(name, value);
 }
 
 /**
  * 设置组件参数
  */
-var setCompAttrs = function (node, params) {
+function setCompAttrs(node, params) {
     if (!node) return;
     for (let i = 0; i < params.length; i++) {
         const param = params[i];
@@ -63,7 +63,7 @@ var setCompAttrs = function (node, params) {
     }
 }
 
-var html_decode = function (str) {
+function html_decode(str) {
     var s = "";
     if (str.length == 0) return "";
     s = str.replace(/&amp;/g, "&");
@@ -80,7 +80,7 @@ var html_decode = function (str) {
  * 寻找dom节点，如果没找到继续往后面找
  * @param {*} dom 
  */
-var getDomElement = function (dom) {
+function getDomElement(dom) {
     if (dom && dom.nodeType === 1) {
         return dom;
     } else {
@@ -93,7 +93,7 @@ var getDomElement = function (dom) {
  * @param {*} parentNode 根节点
  * @param {*} slotName  插槽名
  */
-var getSlot = function (parentNode, slotName) {
+function getSlot(parentNode, slotName) {
     if (slotName) {
         return parentNode.querySelector(`slot[name="${slotName||''}"]`)
     } else {
@@ -106,7 +106,7 @@ var getSlot = function (parentNode, slotName) {
  * @param {*} node 当前节点
  * @param {*} slotName 插槽名
  */
-var replaceSlot = function (parentNode, node, slotName) {
+function replaceSlot(parentNode, node, slotName) {
     const slot = getSlot(parentNode, slotName);
     slot && slot.parentNode.replaceChild(node, slot);
 }
@@ -116,7 +116,7 @@ var replaceSlot = function (parentNode, node, slotName) {
  * @param {*} parentNode   父节点，要插入的片段内根节点
  * @param {*} nodes 要插入的节点列表
  */
-var replaceDefaultSlot = function (parentNode, nodes) {
+function replaceDefaultSlot(parentNode, nodes) {
     const slot = getSlot(parentNode);
     const slotParent = slot && slot.parentNode || null;
     if (slot && slotParent) {
@@ -132,10 +132,11 @@ var replaceDefaultSlot = function (parentNode, nodes) {
  * @param {*} parent 
  * @param {*} node 
  */
-var removeNode = function (parent, node) {
+function removeNode(parent, node) {
     parent && parent.removeChild(node);
 }
-var compileChildren = function (dom) {
+
+function compileChildren(dom) {
     //获取所有组件节点
     const comps = dom.querySelectorAll('template[__comp__]');
     if (comps && comps.length) {
@@ -168,7 +169,7 @@ var compileChildren = function (dom) {
 
 }
 
-var run = function (html, callback) {
+function run(html, callback) {
     const dom = new JSDOM(html);
     const win = dom.window;
     const doc = win.document;
